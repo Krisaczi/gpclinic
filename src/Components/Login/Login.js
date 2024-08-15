@@ -1,57 +1,28 @@
-import "./Sign_Up.css";
-
-const SignUp = () => {
+const Login = () => {
   return (
     <>
       <div className="container">
-        <div class="signup-grid">
-          <div class="signup-text">
-            <h1>Sign Up</h1>
+        <div className="login-grid">
+          <div className="login-text">
+            <h2>Login</h2>
           </div>
-          <div class="signup-text1">
-            Already a member?
+
+          <div className="login-text">
+            Are you a new member?
             <span>
-              <a href="/login">Login</a>
+              <a href="/sign-up">Sign Up Here</a>
             </span>
           </div>
-          <div class="signup-form">
+          <br />
+
+          <div className="login-form">
             <form>
               <div className="form-group">
-                <label for="name">Name</label>
-
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  required
-                  className="form-control"
-                  placeholder="Enter your name"
-                  aria-describedby="helpId"
-                />
-              </div>
-
-              <div class="form-group">
-                <label for="phone">Phone</label>
-
-                <input
-                  type="tel"
-                  name="phone"
-                  id="phone"
-                  required
-                  className="form-control"
-                  placeholder="Enter your phone number"
-                  aria-describedby="helpId"
-                />
-              </div>
-
-              <div className="form-group">
                 <label for="email">Email</label>
-
                 <input
                   type="email"
                   name="email"
                   id="email"
-                  required
                   className="form-control"
                   placeholder="Enter your email"
                   aria-describedby="helpId"
@@ -60,25 +31,23 @@ const SignUp = () => {
 
               <div className="form-group">
                 <label for="password">Password</label>
-
                 <input
+                  type="password"
                   name="password"
                   id="password"
-                  required
                   className="form-control"
                   placeholder="Enter your password"
                   aria-describedby="helpId"
                 />
               </div>
 
-              <div class="btn-group">
+              <div className="btn-group">
                 <button
                   type="submit"
                   className="btn btn-primary mb-2 mr-1 waves-effect waves-light"
                 >
-                  Submit
+                  Login
                 </button>
-
                 <button
                   type="reset"
                   className="btn btn-danger mb-2 waves-effect waves-light"
@@ -86,6 +55,9 @@ const SignUp = () => {
                   Reset
                 </button>
               </div>
+              <br />
+
+              <div className="login-text">Forgot Password?</div>
             </form>
           </div>
         </div>
@@ -94,4 +66,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default Login;
