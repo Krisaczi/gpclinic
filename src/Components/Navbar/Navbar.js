@@ -39,7 +39,11 @@ const Navbar = () => {
           </li>
 
           <li class="link">
-            <a href="#">Appointments</a>
+            <a href="/find-doctor">Appointments</a>
+          </li>
+
+          <li class="link">
+            <a href="/instant-consultation">Consultation</a>
           </li>
 
           <li class="link">
