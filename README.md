@@ -1,1 +1,1 @@
-Hello, this is the readme file.
+MediBook is a user-friendly platform designed to streamline the process of scheduling medical appointments. Patients can easily book and cancel appointments with their preferred doctors, ensuring flexibility and convenience. Additionally, MediBook allows users to leave reviews and ratings for doctors, helping others make informed decisions about their healthcare providers. With a focus on accessibility and efficiency, MediBook aims to enhance the overall patient experience.
