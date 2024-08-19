@@ -64,9 +64,9 @@ const Sign_Up = () => {
                 aria-describedby="helpId"
                 required
               />
-              <label htmlFor="email">Name</label>
+              <label htmlFor="name">Name</label>
               <input
-                value={email}
+                value={name}
                 onChange={(e) => setName(e.target.value)}
                 type="text"
                 name="name"
@@ -77,9 +77,9 @@ const Sign_Up = () => {
                 required
                 minLength="3"
               />
-              <label htmlFor="email">Phone number</label>
+              <label htmlFor="phone">Phone number</label>
               <input
-                value={email}
+                value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 type="tel"
                 name="phone"
@@ -91,17 +91,25 @@ const Sign_Up = () => {
                 maxLength="10"
                 required
               />
-              <label htmlFor="email">Password</label>
+              <label htmlFor="password">Password</label>
               <input
-                value={email}
+                value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                type="email"
-                name="email"
-                id="email"
+                type="password"
+                name="password"
+                id="password"
                 className="form-control"
-                placeholder="Enter your email"
+                placeholder="Enter your password"
                 aria-describedby="helpId"
               />
+              <div className="btn-group">
+                <button
+                  type="submit"
+                  className="btn btn-primary mb-2 mr-1 waves-effect waves-light"
+                >
+                  Sign up
+                </button>
+              </div>
               {showerr && (
                 <div className="err" style={{ color: "red" }}>
                   {showerr}

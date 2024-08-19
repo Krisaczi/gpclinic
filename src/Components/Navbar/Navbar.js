@@ -17,10 +17,10 @@ const Navbar = () => {
     sessionStorage.removeItem("name");
     sessionStorage.removeItem("email");
     sessionStorage.removeItem("phone");
-    // remove email phone
+
     localStorage.removeItem("doctorData");
     setIsLoggedIn(false);
-    // setUsername("");
+    setUsername("");
 
     for (let i = 0; i < localStorage.length; i++) {
       const key = localStorage.key(i);
@@ -45,7 +45,7 @@ const Navbar = () => {
   return (
     <nav>
       <div className="nav__logo">
-        <Link to="/">
+        <Link to="/sign-up">
           StayHealthy{" "}
           <i style={{ color: "#2190FF" }} className="fa fa-user-md"></i>
         </Link>
@@ -56,10 +56,13 @@ const Navbar = () => {
       </div>
       <ul className={click ? "nav__links active" : "nav__links"}>
         <li className="link">
-          <Link to="/">Home</Link>
+          <Link to="/landing-page">Home</Link>
         </li>
         <li className="link">
-          <Link to="/search/doctors">Appointments</Link>
+          <Link to="/">Appointments</Link>
+        </li>
+        <li className="link">
+          <Link to="/instant-consultation">Consultations</Link>
         </li>
         <li className="link">
           <Link to="/healthblog">Health Blog</Link>
@@ -78,7 +81,7 @@ const Navbar = () => {
         ) : (
           <>
             <li className="link">
-              <Link to="/signup">
+              <Link to="/sign-up">
                 <button className="btn1">Sign Up</button>
               </Link>
             </li>
