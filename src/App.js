@@ -7,6 +7,8 @@ import SignUp from "./Components/Sign_Up/SignUp";
 import LandingPage from "./Components/LandingPage/LandingPage";
 import Login from "./Components/Login/Login";
 import Notification from "./Components/Notification/Notification";
+import BookingConsultation from "./Components/BookingConsultation";
+import ReviewForm from "./Components/ReviewForm/ReviewForm";
 
 function App() {
   return (
@@ -20,7 +22,8 @@ function App() {
               path="/instant-consultation"
               element={<InstantConsultation />}
             />
-            <Route path="/find-doctor" element={<FindDoctorSearch />} />
+            <Route path="/find-doctor" element={<BookingConsultation />} />
+            <Route path="/reviews" element={<ReviewForm />} />
             <Route path="/sign-up" element={<SignUp />} />
             <Route path="/login" element={<Login />} />
           </Routes>

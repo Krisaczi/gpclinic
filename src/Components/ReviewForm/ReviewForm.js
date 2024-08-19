@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./ReviewForm.css";
-function GiveReviews() {
+function ReviewForm() {
   const [showForm, setShowForm] = useState(false);
   const [submittedMessage, setSubmittedMessage] = useState("");
   const [showWarning, setShowWarning] = useState(false);
@@ -78,4 +78,4 @@ function GiveReviews() {
     </div>
   );
 }
-export default GiveReviews;
+export default ReviewForm;

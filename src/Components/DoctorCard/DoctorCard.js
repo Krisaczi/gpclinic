@@ -1,7 +1,41 @@
-import "./DoctorCard.css";
+import React, { useEffect, useState } from "react";
 import Popup from "reactjs-popup";
+import "reactjs-popup/dist/index.css";
+import "./DoctorCard.css";
 import AppointmentForm from "../AppointmentForm/AppointmentForm";
-const DoctorCard = () => {
+import { v4 as uuidv4 } from "uuid";
+
+const DoctorCardIC = ({
+  name,
+  speciality,
+  experience,
+  ratings,
+  profilePic,
+}) => {
+  const [showModal, setShowModal] = useState(false);
+  const [appointments, setAppointments] = useState([]);
+
+  const handleBooking = () => {
+    setShowModal(true);
+  };
+
+  const handleCancel = (appointmentId) => {
+    const updatedAppointments = appointments.filter(
+      (appointment) => appointment.id !== appointmentId
+    );
+    setAppointments(updatedAppointments);
+  };
+
+  const handleFormSubmit = (appointmentData) => {
+    const newAppointment = {
+      id: uuidv4(),
+      ...appointmentData,
+    };
+    const updatedAppointments = [...appointments, newAppointment];
+    setAppointments(updatedAppointments);
+    setShowModal(false);
+  };
+
   return (
     <div className="doctor-card-container">
       <div className="doctor-card-details-container">
@@ -28,14 +62,15 @@ const DoctorCard = () => {
             Ratings: {ratings}
           </div>
         </div>
-
-        <div>
-          <button className="book-appointment-btn">
-            <div>Book Appointment</div>
-            <div>No Booking Fee</div>
-          </button>
-        </div>
+        {/* for reference  */}
+        {/* <div>
+              <button className='book-appointment-btn'>                    
+                <div>Book Appointment</div>
+              <div>No Booking Fee</div>
+            </button>
+              </div> */}
       </div>
+
       <div className="doctor-card-options-container">
         <Popup
           style={{ backgroundColor: "#FFFFFF" }}
@@ -116,4 +151,4 @@ const DoctorCard = () => {
   );
 };
 
-export default DoctorCard;
+export default DoctorCardIC;
