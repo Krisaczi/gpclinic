@@ -42,8 +42,6 @@ const FindDoctorSearch = () => {
           }}
         >
           <div className="doctor-search-box">
-            {/* <p>Perform a search to see the results.</p> */}
-
             <input
               type="text"
               className="search-doctor-input-box"

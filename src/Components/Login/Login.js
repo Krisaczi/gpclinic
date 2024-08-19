@@ -24,6 +24,9 @@ const Login = () => {
                   name="email"
                   id="email"
                   className="form-control"
+                  pattern=".+@example\.com"
+                  size="30"
+                  required
                   placeholder="Enter your email"
                   aria-describedby="helpId"
                 />
@@ -38,6 +41,8 @@ const Login = () => {
                   className="form-control"
                   placeholder="Enter your password"
                   aria-describedby="helpId"
+                  required
+                  minLength="8"
                 />
               </div>
 
